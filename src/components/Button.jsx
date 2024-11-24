@@ -1,23 +1,16 @@
-import React from 'react'
 
-function Button ({
-    children,     //btnText
-    type = 'button',
-    bgColor = 'bg-blue-600',
-    textColor = 'text-white',
-    className = '',
+
+export default function Button({
+    children,
+    type = "button",
+    bgColor = "bg-blue-600",
+    textColor = "text-white",
+    className = "",
     ...props
-}){
-  console.log('Button component rendered')
-  console.log('Button props:', props)
-  return (
-    <button
-      type={type}
-      className={`px-4 py-2 rounded-lg ${bgColor} ${textColor} ${className}`}
-      {...props}
-    >
-        {children}
-    </button>
-  )
+}) {
+    return (
+        <button className={`px-4 py-2 rounded-lg ${bgColor} ${textColor} ${className}`} {...props}>
+            {children}
+        </button>
+    );
 }
-export default Button
