@@ -1,4 +1,4 @@
-import React ,{useState} from 'react'
+import {useState} from 'react'
 import authService from '../appwrite/auth'
 import { Link,useNavigate } from 'react-router-dom'
 import { login } from '../store/authSlice'
@@ -12,10 +12,10 @@ function Signup() {
     const dispatch = useDispatch()
     const {register ,handleSubmit }  = useForm()
 
-    const  create = async(data)=>{
+    const create = async(data)=>{
         setError("")
         try {
-            const userdata = await authService.createAccount(data)
+            const userData = await authService.createAccount(data)
             if(userData){
                 const userData = await authService.getCurrentUser()
                 if(userData) dispatch(login(userData));
@@ -75,7 +75,8 @@ function Signup() {
                             <Button 
                                 type ="submit"
                                 className="w-full"
-                                >Create Account</Button>
+                                >Create Account
+                            </Button>
                 </div>
             </form>
         </div>
