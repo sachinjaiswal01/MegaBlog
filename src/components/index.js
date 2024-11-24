@@ -4,6 +4,7 @@ import Container from "postcss/lib/container";
 import Logo from "./Logo";
 import LogoutBtn from "./Header/LogoutBtn";
 import RTE from "./RTE";
+import Signup from "./Signup"
 
 export {
     Header,
@@ -11,5 +12,6 @@ export {
     Container,
     Logo,
     LogoutBtn,
-    RTE
+    RTE,
+    Signup
 }
