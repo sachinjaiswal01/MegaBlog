@@ -11,7 +11,8 @@ import Button from "./Button";
 import PostForm from "./post-form/PostForm";
 import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
-import Input from "./Input";
+import input from "./input.jsx"; // Explicit extension
+
 
 export {
     Header,
@@ -27,5 +28,5 @@ export {
     PostCard,
     AuthLayout, 
     Select,
-    Input
+    input
 }
