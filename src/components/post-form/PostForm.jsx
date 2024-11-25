@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { useForm } from "react-hook-form";
-import { Button, Input, RTE, Select } from "..";
+import { Button, input, RTE, Select } from "..";
 import appwriteService from "../../appwrite/config";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -73,13 +73,13 @@ export default function PostForm({ post }) {
     return (
         <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
             <div className="w-2/3 px-2">
-                <Input
+                <input
                     label="Title :"
                     placeholder="Title"
                     className="mb-4"
                     {...register("title", { required: true })}
                 />
-                <Input
+                <input
                     label="Slug :"
                     placeholder="Slug"
                     className="mb-4"
@@ -91,7 +91,7 @@ export default function PostForm({ post }) {
                 <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
             </div>
             <div className="w-1/3 px-2">
-                <Input
+                <input
                     label="Featured Image :"
                     type="file"
                     className="mb-4"
